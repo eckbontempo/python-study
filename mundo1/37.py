@@ -1,34 +1,10 @@
+n =  int(input('Digite um numero'))
 
-num = int(input('Digite um valor: '))
-
-x = input('1 - Binário \n2 - Octal \n3 - hexadexcimal\n')
+x = int(input('1 - Bin\n 2 - Octal\n 3 - Hex\n '))
 
 if x == 1:
-
-    def dec(num):
-        
-        if num >= 1:
-            dec(num // 2)
-        print(num % 2, end = '')
- 
-
-''''
-
-# Function to convert decimal number
-# to binary using recursion
-def DecimalToBinary(num):
-     
-    if num >= 1:
-        DecimalToBinary(num // 2)
-    print(num % 2, end = '')
- 
-# Driver Code
-if __name__ == '__main__':
-     
-    # decimal value
-    dec_val = 25
-     
-    # Calling function
-    DecimalToBinary(dec_val)
-
-'''
+    print(bin(n)[2:])
+elif x == 2:
+    print(oct(n)[2:])
+elif x == 3:
+    print(hex(n)[2:])
