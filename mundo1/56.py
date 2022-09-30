@@ -1,27 +1,23 @@
-somaidade = 0
-idademedia = 0
-totalmulher = 0
-nomevelho = 0
+homemvelho = 0
 maioridade = 0
+idademedia = 0
+idademulher = 0
 
-for c in range (1, 5):
 
-    name = input('nome pessoa ', c )
-    idade = int(input('nome pessoa ', c ))
-    sexo = input('nome pessoa m/f ', c )
-    somaidade += idade
+for c in range(1,5):
+    nome = str(input('nome da pessoa {}'.format(c)))
+    idade = int(input('idade da pessoa {}'.format(c)))
+    sexo = str(input('sexo e da pessoa m/f {}'.format(c)))
+    idademedia += idade
     if c == 1 and sexo in 'm':
+        homemvelho = nome
         maioridade = idade
-        nomevelho = name
-    if sexo in 'm' and idade > maioridade:
+    if sexo == 'm' and idade > maioridade:
+        homemvelho = nome
         maioridade = idade
-        nomevelho = name
-    if sexo in 'f' and idade < 20:
-        totalmulher += 1
-    
-idademedia =  somaidade / 4
+    if sexo == 'f' and idade < 20:
+        idademulher += 1
 
-print('A media de didade do grupo é: ', idademedia)
-print('Homem mais velho é {} tendo {} anos'.format(nomevelho, maioridade))
-print('total de mulher com menos de 20 anos: ', totalmulher)
-print(name)
+print('Media da idade do grupo é {}'.format(idademedia / 4))
+print('O nome do homem mais velho é {} e sua idade {}'.format(homemvelho, maioridade))
+print('Total de mulher com menos de 20 anos: {}'.format(idademulher))
