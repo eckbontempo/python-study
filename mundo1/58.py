@@ -1,10 +1,13 @@
-import random 
 
-contador = 0
-pc = random.randint(1,10)
-n = int(input('Digite um valor: '))
+import random
 
-while n != pc:
-    n = int(input('Errou mizeravi! Digite outro número: '))
-    contador += 1 
-print('Acertou! total de tentativas: {}'.format(contador))
+cont = 0
+num = int(input('Digite um número'))
+
+num2 = random.randint(0, 10)  
+
+while num != num2:
+    num = int(input('Errou digite outro número'))
+    cont += 1
+
+print('Você acertou, total de tentativas {}'.format(cont))
