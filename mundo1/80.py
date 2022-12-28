@@ -7,7 +7,7 @@ for c in range(0, 5):
     else:
         pos = 0
         while pos < len(num):
-            if i <= num[pos]:
+             if i <= num[pos]:
                 num.insert(pos, i)
                 break
 

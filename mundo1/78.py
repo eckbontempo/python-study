@@ -1,16 +1,22 @@
-<<<<<<< HEAD
-import pandas as pd
-vendas = {}
+lista = list()
 
-vendas_dp = pd.DataFrame(vendas)
-=======
-numero = []
+for c in range(0, 5):
+    lista.append(int(input("Digite o valor {} ".format(c))))
 
-for c in range(0,5):
-    c = int(input("Digite o valor"))
-    numero.append(c)
+mai = lista[0]
+indexmai = 0
+men = lista[0]
+indexmen = 0
 
-numero.sort()
+for c, v in enumerate(lista):
+    if v > mai:
+        main = v
+        indexmai = c
 
-print('o maior número é {}, e o menor é {}'.format(numero[4], numero[0]))
->>>>>>> 11e50f75d2ebccd7eca52f24b24fbfe28d1d136e
+    if v < men:
+        men = v
+        index = c
+
+
+print("o valor maior é {} e esta na posicao {}".format(main, indexmai))
+print("o valor menor é {} e esta na posicao {}".format(men, indexmen))

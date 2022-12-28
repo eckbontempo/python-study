@@ -1,17 +1,17 @@
-ls = (int(input('Digite')),int(input('Digite')),int(input('Digite')),int(input('Digite')),int(input('Digite')))
+lista, listapares, listaimpares = list(), list(), list()
 
-print('Você digitou os números: ', end='')
-for i in ls:
-    print('{} '.format(i), end ='')
-
-print('\nO valor 9 aparece {} vezes'.format(ls.count(9)))
-if 3 in ls:
-    print('o valor 3 apareceu pela primeira vez {}'.format(ls.index(3)+1))
-else:  
-    print('o valor 3 não foi digitado')
-        
-print('os valores pares digitados foram: ')
-for c in ls:
-    if c % 2 == 0:
-        print('{} '.format(c), end='')
+num = int(input("Digite o valor"))
+while True:
+    if num == 999:
+        print(f"lista: \n{lista}")
+        print(f"lista de pares: \n{listapares}")
+        print(f"lista de impares: \n{listaimpares}")
+        break
+    else:
+        lista.append(num)
+        if num % 2 == 0:
+            listapares.append(num)
+        else:
+            listaimpares.append(num)
+    num = int(input("Digite o valor"))
 

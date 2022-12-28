@@ -1,19 +1,17 @@
-lista = list()
-pares = list()
-impares = list()
+lista, listapares, listaimpares = list(), list(), list()
 
+num = int(input("Digite o valor"))
 while True:
-    lista.append(int(input("digite o valor")))
-    if 00 in lista:
+    if num == 999:
+        print(f"lista: \n{lista}")
+        print(f"lista de pares: \n{listapares}")
+        print(f"lista de impares: \n{listaimpares}")
         break
+    else:
+        lista.append(num)
+        if num % 2 == 0:
+            listapares.append(num)
+        else:
+            listaimpares.append(num)
+    num = int(input("Digite o valor"))
 
-for c in range(len(lista)):
-    if c%2 == 0:
-        if c != 0:
-            pares.append(c)
-    elif c%2 != 0:
-        impares.append(c)
-
-print(f'lista completa : {lista}')
-print(f'pares : {pares}')
-print(f'impares : {impares}')

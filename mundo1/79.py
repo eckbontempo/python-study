@@ -1,21 +1,12 @@
-from re import T
-
-
-num = [0]
+lista = list()
 
 while True:
-
-    c = int(input("Digite o valor"))
-
-    if c not in num:
-        num.append(c)
-        print('numero cadastrado')
-    
-    r = input('seja continua S/N')
-    if r in "Nn":
+    num = int(input("Digite o valor"))
+    if num == 999:
+        print("programa finalizado")
         break
+    else:
+        if num not in lista:
+            lista.append(num)
 
-num.sort()
-
-print(num)
-
+print(sorted(lista))
