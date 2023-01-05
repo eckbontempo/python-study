@@ -1,17 +1,7 @@
-lista, listapares, listaimpares = list(), list(), list()
+# criando a lista
+lista = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-num = int(input("Digite o valor"))
-while True:
-    if num == 999:
-        print(f"lista: \n{lista}")
-        print(f"lista de pares: \n{listapares}")
-        print(f"lista de impares: \n{listaimpares}")
-        break
-    else:
-        lista.append(num)
-        if num % 2 == 0:
-            listapares.append(num)
-        else:
-            listaimpares.append(num)
-    num = int(input("Digite o valor"))
+# atribuindo os elementos da lista do início até a metade à variável "nova_lista"
+nova_lista = lista[:len(lista)//2]
 
+print(nova_lista)
