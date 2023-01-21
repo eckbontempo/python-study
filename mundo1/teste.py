@@ -1,7 +1,5 @@
-# criando a lista
-lista = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+c = 1
+b = 2
 
-# atribuindo os elementos da lista do início até a metade à variável "nova_lista"
-nova_lista = lista[:len(lista)//2]
-
-print(nova_lista)
+if c < b:
+    print("maior")
